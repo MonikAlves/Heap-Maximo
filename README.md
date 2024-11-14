@@ -1,5 +1,5 @@
 # Sistema de Heap Máximo
-[Descrição](#descrição) | [Funcionalidades](#funcionalidades) | [Limitações](#limitações) | [Exemplo Visual](#exemplo-visual) | [Instruções para Uso](#instruções-para-uso)
+[Descrição](#descrição) | [Funcionalidades](#funcionalidades) | [Limitações](#limitações) | [Instruções para Uso](#instruções-para-uso)
 
 ## Descrição
 Este projeto implementa um sistema de **heap máximo** que aceita e manipula números inteiros. Ele oferece funcionalidades de adição, remoção e busca de valores no heap, além de permitir a exclusão completa da estrutura.
@@ -30,16 +30,17 @@ Este projeto implementa um sistema de **heap máximo** que aceita e manipula nú
 ### Como Compilar
 Para compilar o programa, use o seguinte comando no terminal:
 ```bash
-gcc main.c bibliotecas/*.c -I"bibliotecas" -o Main
-Esse comando compila o main.c e as bibliotecas associadas e gera o executável Main.
+gcc main.c bibliotecas/*.c -I"bibliotecas" -o main
 ```
+Esse comando compila o main.c e as bibliotecas associadas e gera o executável main.
 
 Como Executar
 Após a compilação, execute o programa com o seguinte comando:
 
 ```
-./Main
-Isso iniciará o menu interativo, onde você poderá adicionar, remover, buscar valores ou apagar a estrutura completa do heap máximo.
+./main
 ```
+Isso iniciará o menu interativo, onde você poderá adicionar, remover, buscar valores ou apagar a estrutura completa do heap máximo.
+
 
 
