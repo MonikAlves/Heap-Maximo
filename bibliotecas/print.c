@@ -185,18 +185,16 @@ void free_ascii_tree(asciinode *nodo) {
 
 void liberarArvore(Arvore* raiz) {
     if (raiz == NULL) {
-        return;  // Passo base: Se o nó for NULL, retorna
+        return;  
     }
 
-    // Libera os nós filhos
     liberarArvore(raiz->esquerda);
     liberarArvore(raiz->direita);
 
-    // Libera o nó atual
     free(raiz);
 }
 
-// Função para imprimir a árvore em ordem de nível
+
 void imprimirArvore(int * heap, int tamanho) {
     Arvore* root = construirArvoreHeap(heap, 0, tamanho);
     asciinode* proot = build_ascii_tree(root);
@@ -222,7 +220,7 @@ void imprimirArvore(int * heap, int tamanho) {
     free_ascii_tree(proot);
     liberarArvore(root);
 }
-// Função para criar um novo nó da árvore
+
 Arvore* criarNo(int valor) {
     Arvore* novoNo = (Arvore*)malloc(sizeof(Arvore));
     novoNo->valor = valor;
@@ -231,15 +229,15 @@ Arvore* criarNo(int valor) {
     return novoNo;
 }
 
-// Função para construir a árvore binária a partir de um array representando um heap
+
 Arvore* construirArvoreHeap(int *heap, int index, int tamanho) {
     if (index >= tamanho || heap[index] == -1) {
         return NULL;
     }
 
     Arvore* raiz = criarNo(heap[index]);
-    raiz->esquerda = construirArvoreHeap(heap, 2 * index + 1, tamanho); // Filho esquerdo
-    raiz->direita = construirArvoreHeap(heap, 2 * index + 2, tamanho);  // Filho direito
+    raiz->esquerda = construirArvoreHeap(heap, 2 * index + 1, tamanho); 
+    raiz->direita = construirArvoreHeap(heap, 2 * index + 2, tamanho);  
 
     return raiz;
 }

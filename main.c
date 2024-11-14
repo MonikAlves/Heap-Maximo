@@ -14,9 +14,11 @@ int main() {
     
     while (1) {
         if (tamanho == 0) {
+            limparTerminal();
             printf("Nenhum heap criado ainda. Por favor, crie um novo heap\n");
             opcao = 1;
         }else{
+            limparTerminal();
             exibirMenu();   
             imprimirArvore(heap,tamanho);
 
@@ -69,7 +71,7 @@ int main() {
                 break;
             case 5:
                 printf("Saindo...\n");
-                return 0; // Encerra o programa
+                return 0; 
             default:
                 printf("Opção inválida! Tente novamente.\n");
         }

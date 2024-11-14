@@ -48,7 +48,7 @@ int busca(int * heap,int valor,int tamanho){
 }
 
 void organizarBaixo(int * heap,int indice,int indiceMaior,int tamanho){
-    if(indice < 0 || indiceMaior > tamanho) return;
+    if(indice < 0 || indiceMaior >= tamanho) return;
     trocar(heap,indice,indiceMaior);
 
     indice = indiceMaior;
@@ -104,11 +104,11 @@ int remover(int valor, int * heap,int *tamanho){
 void mostrarRelacoes(int * heap,int valor,int tamanho){
     int indice = busca(heap,valor,tamanho);
     if(indice != -1){
-        printf("\nAs relações do %d são : \n",heap[indice]);
+        printf("\nAs relações do %d são : \n\n",heap[indice]);
         if(indice > 0 ) printf("Pai -> %d\n",heap[pai(indice)]);
         if(filhoEsq(indice) < tamanho) printf("Filho esquerdo -> %d\n",heap[filhoEsq(indice)]);
-        if(filhoDir(indice) < tamanho) printf("Filho direito -> %d\n",heap[filhoDir(indice)]);
+        if(filhoDir(indice) < tamanho) printf("Filho direito -> %d",heap[filhoDir(indice)]);
     }else{
-        printf("O valor %d não se encontra na arvore\n");
+        printf("\nO valor %d não se encontra na arvore\n",valor);
     }
 }
